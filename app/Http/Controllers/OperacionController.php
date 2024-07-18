@@ -12,7 +12,8 @@ class OperacionController extends Controller
      */
     public function index()
     {
-        //
+        $caso = Operacion::all();
+        return view('operacion.index', compact('caso'));
     }
 
     /**
@@ -33,6 +34,9 @@ class OperacionController extends Controller
         $caso->identificacion = $request-> input('identificacion');
         $caso->codigo = $request->input('codigo');
         $caso->cargo = $request-> input('cargo');
+        if($request->hasFile('imagen')){
+            $caso->imagen = $request->file('imagen')->store('public/operacion');
+        }
         $caso->save();
         return 'Guardado de manera exitosa';
     }
@@ -42,7 +46,8 @@ class OperacionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $caso = Operacion::find($id);
+        return view('operacion.show', compact('caso'));
     }
 
     /**

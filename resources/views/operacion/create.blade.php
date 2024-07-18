@@ -25,6 +25,12 @@
         <input type="string" class="form-control" id="cargo" name="cargo">
       </div>
       <br>
+      <div class="mb-3">
+        <label for="imagen" class="form-label">Cargar imagen </label>
+        <br>
+        <input id="imagen" type="file" name="imagen">
+      </div>
+      <br>
       <button type="submit" class="btn btn-success">Guardar</button>
 </form>
 @endsection

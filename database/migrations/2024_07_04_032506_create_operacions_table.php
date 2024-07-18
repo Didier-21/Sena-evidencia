@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('identificacion');
             $table->integer('codigo');
             $table->string('cargo');
+            $table->string('imagen');
         });
     }
 
