@@ -55,7 +55,9 @@ class OperacionController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $caso = Operacion::find($id);
+        return view('operacion.edit',compact('caso'));
+
     }
 
     /**
@@ -63,7 +65,13 @@ class OperacionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $caso = Operacion::find($id);
+        $caso->fill($request->except('imagen'));
+        if ($request->hasFile('imagen')){ //si desde ese campo viene un archivo hacer:
+            $caso->imagen = $request->file('imagen')->store('public/operacion');
+            $caso->save();
+            return 'operador actualizado';
+        }
     }
 
     /**
