@@ -8,6 +8,7 @@
 <h3 class="tex-center">Lista de operadores</h3>
 <br>
 <div class="row">
+    <a href="/operacion/create" class="btn btn-success">Crear operador </a>
 @foreach ($caso as $casito)
     <div class="col-sm">
         <div class="card" style="width: 18rem;">

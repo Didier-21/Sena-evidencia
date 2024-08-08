@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Operacion;
 use Illuminate\Http\Request;
+use Mockery\Undefined;
 use PHPUnit\Framework\Constraint\Operator;
 
 class OperacionController extends Controller
@@ -38,7 +39,7 @@ class OperacionController extends Controller
             $caso->imagen = $request->file('imagen')->store('public/operacion');
         }
         $caso->save();
-        return 'Guardado de manera exitosa';
+        return redirect()->route('operacion.index');
     }
 
     /**
@@ -70,7 +71,7 @@ class OperacionController extends Controller
         if ($request->hasFile('imagen')){ //si desde ese campo viene un archivo hacer:
             $caso->imagen = $request->file('imagen')->store('public/operacion');
             $caso->save();
-            return 'operador actualizado';
+            return redirect()->route('operacion.index');
         }
     }
 
@@ -79,6 +80,15 @@ class OperacionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $caso= Operacion::find($id);
+         $caso->delete();
+         return redirect()->route('operacion.index');
+        //return response()->json(['message' => 'operador eliminado exitosamente.']);
+       // if (is_null($caso)) {
+            // Eliminar el usuario
+
+       // } else {
+           // return response()->json(['message' => 'operador no encontrado.'], 404);
+       // }
     }
 }

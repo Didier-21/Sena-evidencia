@@ -32,6 +32,7 @@
     </div>
     <br>
     <button type="submit" class="btn btn-success">Actualizar informacion </button>
+    <a href="/operacion/{{$caso->id}}" class="btn btn-secondary">Cancelar</a>
 </form>
 
 @endsection

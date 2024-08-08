@@ -13,7 +13,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/operacion">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Eventos</a>
@@ -26,7 +26,7 @@
                       Opciones
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">crear caso</a></li>
+                      <li><a class="dropdown-item" href="/operacion/create">crear operador</a></li>
                       <li><a class="dropdown-item" href="#">consultar caso</a></li>
                       <li><a class="dropdown-item" href="#">buscar caso</a></li>
                     </ul>

@@ -13,5 +13,7 @@ Route::get('/saludo', function () {
 });
 
 Route::get ('/mensaje',[EjemploController::class,'mensaje']);
-
+Route::get ('operacion/{id}/delete', [OperacionController::class, 'destroy']);
 Route::resource('/operacion',OperacionController::class );
+
+

@@ -32,5 +32,6 @@
       </div>
       <br>
       <button type="submit" class="btn btn-success">Guardar</button>
+      <a href="/operacion" class="btn btn-secondary">Cancelar</a>
 </form>
 @endsection

@@ -14,6 +14,8 @@
     </div>
     <br>
     <a href="/operacion/{{$caso->id}}/edit" class="btn btn-warning">Editar operador</a>
+    <a href="/operacion/{{$caso->id}}/delete" class="btn btn-danger">Eliminar operador </a>
+    <a href="/operacion" class="btn btn-secondary">Atras</a>
     {{-- <a href="/cursos/{{$cursito->id}}/edit" class="btn btn-dark">Editar curso</a> --}}
 </div>
 
